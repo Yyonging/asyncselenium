@@ -13,8 +13,6 @@ from selenium.webdriver.remote.remote_connection import RemoteConnection
 
 LOGGER = logging.getLogger(__name__)
 
-# 如何避免 async 到处传递
-
 class AsyncRemoteConnection(RemoteConnection):
     '''Async connection with the async remote webdriver server
     '''
