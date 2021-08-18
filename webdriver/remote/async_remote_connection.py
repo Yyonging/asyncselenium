@@ -1,4 +1,3 @@
-import asyncio
 import aiohttp
 import logging
 
@@ -62,7 +61,6 @@ class AsyncRemoteConnection(RemoteConnection):
                             return data
                     finally:
                         LOGGER.debug("Finished Request")
-                        # resp.close()
         return __async_request
 
 

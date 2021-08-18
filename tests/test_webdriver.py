@@ -4,9 +4,9 @@ sys.path.append('.')
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from asyncselenium.remote.async_webdriver import AsyncWebdriver
-from asyncselenium.support.async_wait import AsyncWebDriverWait
-from asyncselenium.support import async_expected_conditions as ec
+from asyncselenium.webdriver.remote.async_webdriver import AsyncWebdriver
+from asyncselenium.webdriver.support.async_wait import AsyncWebDriverWait
+from asyncselenium.webdriver.support import async_expected_conditions as ec
 
 chrome_options = webdriver.ChromeOptions()
 

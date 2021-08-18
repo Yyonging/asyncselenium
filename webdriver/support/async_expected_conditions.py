@@ -20,7 +20,7 @@ from selenium.common.exceptions import NoSuchFrameException
 from selenium.common.exceptions import StaleElementReferenceException
 from selenium.common.exceptions import WebDriverException
 from selenium.common.exceptions import NoAlertPresentException
-from asyncselenium.remote.async_webelement import AsyncWebElement
+from asyncselenium.webdriver.remote.async_webelement import AsyncWebElement
 
 """
  * Canned "Expected Conditions" which are generally useful within webdriver

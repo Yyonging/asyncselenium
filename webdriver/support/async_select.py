@@ -1,5 +1,5 @@
-from asyncselenium.remote.async_webelement import AsyncWebElement
-from asyncselenium.remote.async_object import Asyncobject
+from asyncselenium.webdriver.remote.async_webelement import AsyncWebElement
+from asyncselenium.webdriver.remote.async_object import Asyncobject
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException, UnexpectedTagNameException
 from selenium.webdriver.support.select import Select
