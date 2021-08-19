@@ -1,6 +1,5 @@
 import asyncio
 import sys
-sys.path.append('.')
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
