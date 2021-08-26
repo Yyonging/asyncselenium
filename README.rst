@@ -35,3 +35,31 @@ if you already make the remote driver running (use the default port 4444):
 
     asyncio.run(test_get())
 
+.. code-block:: python
+
+    import asyncio
+    import sys
+    sys.path.append('.')
+    from selenium.webdriver.chrome import service
+    from asyncselenium.webdriver.chrome.async_webdriver import WebDriver
+    
+    driver_path = ''
+    async def test_get():
+        browser = await WebDriver(driver_path)
+        await browser.get('https://www.baidu.com')
+        await asyncio.sleep(5)
+        await browser.quit()
+    
+    async def test_multi_browser():
+        service = WebDriver.get_service(driver_path)
+        browser = await WebDriver(driver_path, service=service)
+        await browser.get('https://www.baidu.com')
+        browser2 = await WebDriver(driver_path, service=service)
+        await browser2.get('https://news.baidu.com')
+        await asyncio.sleep(5)
+        await browser.quit(stop_service=False)
+        await browser2.get('https://www.baidu.com')
+        await asyncio.sleep(5)
+        await browser2.quit()
+    
+    asyncio.run(test_multi_browser())

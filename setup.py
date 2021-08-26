@@ -29,7 +29,7 @@ for scheme in INSTALL_SCHEMES.values():
 setup_args = {
     'cmdclass': {'install': install},
     'name': 'asyncselenium',
-    'version': "0.0.1",
+    'version': "0.0.2",
     'license': 'Apache 2.0',
     'description': 'A async selenium package to improve performance',
     'long_description': open(join(abspath(dirname(__file__)), "README.rst")).read(),
@@ -53,6 +53,7 @@ setup_args = {
                  'asyncselenium.webdriver',
                  'asyncselenium.webdriver.remote',
                  'asyncselenium.webdriver.support',
+                 'asyncselenium.webdriver.chrome',
                 ],
     'include_package_data': True,
     'install_requires': ['selenium', 'aiohttp'],
